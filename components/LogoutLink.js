@@ -1,12 +1,12 @@
 import React from 'react'
 
-const LogoutLink = ({ onLogout }) => (
-    <a href="" onClick={
+const LogoutLink = ({ onLogout, children = 'Logout', className = '' }) => (
+    <a href="" className={className} onClick={
       (e) => {
         e.preventDefault()
         onLogout()
       }
-    }>Logout</a>
+    }>{children}</a>
 )
 
 export default LogoutLink
